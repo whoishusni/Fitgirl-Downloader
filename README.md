@@ -9,8 +9,8 @@ this script can automate scrap fitgirl download link website to get direct downl
 2. search and choose your game
 3. in the "Download Mirrors (Direct Links)" section choose file hoster (i recommend fuckingfast)
 4. click link and it will direct to another url
-5. in the top, click "save paste"
-6. after that, open downloaded file, and remove first line that write "##Download links"
+5. in the top, click "save paste", and make sure you rename that file so it can be easy in the next step  
+6. after that, open downloaded file and remove first line that write "##Download links"
 7. save file
 8. run the script
 9. if all process is done, there will be another txt file created
