@@ -52,17 +52,14 @@ Version : 2.0
             with open(file_name, 'r') as raw_file:
                 raws_reader = raw_file.read().splitlines()
                 for raw_reader in raws_reader:
-                    clean_link_dict = {}
                     if raw_reader.startswith('-'):
                         replace_url = raw_reader.replace('- ','')
-                        clean_link_dict['URL'] = replace_url
                         clean_link.append(replace_url)
 
             # search direct link / hidden link
             direct_url = []
             # for urls in range(len(clean_link)):
             for index, urls in enumerate(range(len(clean_link)), 1):
-                clean_url_dict = {}
                 clean_url = clean_link[urls]
                 response = requests.get(clean_url)
                 soup = BeautifulSoup(response.content, 'html.parser')
@@ -71,8 +68,7 @@ Version : 2.0
                     found_link_tag = re.search(r'window\.open\("([^"]+)"\)', real_link.string)
                     found_link = found_link_tag.group(1)
                     print(f'{index}/{len(clean_link)}. {found_link}')
-                    clean_url_dict['URL'] = found_link
-                    direct_url.append(clean_url_dict)
+                    direct_url.append(found_link)
                     
                 else:
                     print('no link found')
@@ -80,12 +76,13 @@ Version : 2.0
             # create direct link file
             with open('direct_link.txt', 'w') as direct_file:
                 for direct_link in range(len(direct_url)):
-                    direct_file.write(direct_url[direct_link]['URL']+'\n')
+                    direct_file.write(direct_url[direct_link]+'\n')
+                    
             print(' Selesai '.center(63,'-'))
             time.sleep(1)
             print('Link Tersimpan di file \'direct_link.txt\', silahkan di cek.')
             time.sleep(2)
-            print('Selanjutnya Akan Diarahkan Cara Mendownload VIA Browser Anda, Browser Akan Terbuka Otomatis')
+            print('Gunakan Link Yang Jadi, dan Download Menggunakan BATCH DOWNLOAD IDM')
             time.sleep(2)
             print('Sedang Menghentikan Aplikasi...')
             time.sleep(5)
