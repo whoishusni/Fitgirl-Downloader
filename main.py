@@ -19,7 +19,7 @@ direct download IDM untuk website Download Game FITGIRL
 (Menggunakan Mirror Download)
 
 Author  : Husni
-Version : 1.0
+Version : 1.5
 ---------------------------------------------------------------""")
     print(' Daftar File TXT Di Directory Ini: '.center(63,'-'))
     list_files = os.listdir()
