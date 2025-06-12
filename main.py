@@ -6,18 +6,20 @@ import time
 
 def main():
     # banner
-    print("""
-██████   █████   ██████  ██    ███████  █████  ██    ██ ███████ 
-██   ██ ██   ██ ██       ██    ██      ██   ██ ██    ██ ██      
-██████  ███████ ██   ███ ██    ███████ ███████ ██    ██ ███████ 
-██   ██ ██   ██ ██    ██ ██         ██ ██   ██ ██    ██      ██ 
-██████  ██   ██  ██████  ██    ███████ ██   ██  ██████  ███████ 
+    print(fr"""
+ ______ _ _   _                     _           
+|  ____(_) | | |                   | |          
+| |__   _| |_| |     ___   __ _  __| | ___ _ __ 
+|  __| | | __| |    / _ \ / _` |/ _` |/ _ \ '__|
+| |    | | |_| |___| (_) | (_| | (_| |  __/ |   
+|_|    |_|\__|______\___/ \__,_|\__,_|\___|_|    
 ===============================================================
-aplikasi untuk membuat link direct download IDM untuk website
-Download Game FITGIRL (Menggunakan Mirror Download)
+FitLoader (Fitgirl Downloader)aplikasi untuk membuat link
+direct download IDM untuk website Download Game FITGIRL
+(Menggunakan Mirror Download)
 
 Author  : Husni
-Version : 2.0
+Version : 1.0
 ---------------------------------------------------------------""")
     print(' Daftar File TXT Di Directory Ini: '.center(63,'-'))
     list_files = os.listdir()
